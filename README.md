@@ -1,9 +1,5 @@
 # bball-stats-app
 
-# IMPORTANT!!!
-
-I am leaving this project in favor of [Create Chrome Extension](https://github.com/schovi/create-chrome-extension). It is standalone npm package and should be more maintanable.
-
 ## Description
 
 This is a chrome extension that to see NBA standings, boxscores and player stats.
