@@ -189,7 +189,7 @@ function configGenerator(isDevelopment, Manifest) {
             test: /\.jsx?$/,
             exclude: /node_modules/,
             loaders: isDevelopment ? [
-              'react-hot', 'babel-loader'
+              'react-hot-loader/webpack', 'babel-loader'
             ] : [
               'babel-loader'
             ]

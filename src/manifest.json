@@ -12,15 +12,12 @@
     "persistent": true,
     "scripts": ["background/index.js"]
   },
-  "page_action": {
-    "default_title": "Bball-stats",
-    "default_popup": "popup/index.html"
-  },
   "chrome_url_overrides" : {
     "newtab": "newtab/index.html"
   },
   "browser_action": {
-    "default_popup": "popup.html"
+    "default_title": "Bball-stats",
+    "default_popup": "popup/index.html"
   },
   "permissions": [
     "notifications",
