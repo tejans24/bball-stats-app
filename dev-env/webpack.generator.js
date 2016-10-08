@@ -6,6 +6,8 @@ import _ from 'lodash';
 import * as Remove from './remove'
 import * as paths from './paths'
 import ManifestPlugin from './manifest/plugin'
+import { includePaths as bourbonIncludePaths } from 'bourbon'
+import { includePaths as neatIncludePaths } from 'bourbon-neat'
 
 // NOTE Style preprocessors
 // If you want to use any of style preprocessor, add related npm package + loader and uncomment following line
@@ -177,6 +179,10 @@ function configGenerator(isDevelopment, Manifest) {
             test: /\.(ttf|eot)/,
             loader: "url-loader?limit=1000000?name=[name]-[hash].[ext]",
             exclude: /node_modules/
+          },
+          {
+            test: /\.scss$/,
+            loaders: ["style", "css", "sass"]
           }
         ])
 
@@ -210,6 +216,9 @@ function configGenerator(isDevelopment, Manifest) {
 
         return loaders
       })()
+    },
+    sassLoader: {
+      includePaths: [path.resolve(__dirname, "../src/styles"), bourbonIncludePaths, neatIncludePaths]
     }
   }
 }

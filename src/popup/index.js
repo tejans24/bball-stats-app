@@ -5,4 +5,5 @@ import welcome from 'shared/welcome'
 import "shared/page.css"
 import "shared/App/app.css"
 
-welcome
+import 'shared/main'
+//welcome

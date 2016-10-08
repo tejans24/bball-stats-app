@@ -1,14 +1,6 @@
 import React from 'react'
 
 const Standing = ({ standing }) => {
-  getIntialState() {
-    return {
-      standings: {
-        conferences: {}
-      }
-    }
-  }
-  
   return (
     <div className="section--standings">
       <ul className="nav nav-tabs" role="tablist">
