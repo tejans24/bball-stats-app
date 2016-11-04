@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import App from './App/App'
+import Main from './Main/Main'
 
 const mountnode = document.getElementById('react');
-ReactDOM.render(<App />, mountnode);
+ReactDOM.render(<Main />, mountnode);
