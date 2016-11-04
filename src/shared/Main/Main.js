@@ -7,7 +7,6 @@ import App from '../containers/App/App'
 import { configureClient } from '../store/configureStore'
 
 const store = configureClient({})
-//const store = createStore(reducers)
 
 const Main = (props) => {
   return (

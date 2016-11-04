@@ -17,8 +17,6 @@ let Standings = (props) => {
 
 const mapStateToProps = (state) => {
   let { standings } = state;
-  console.log(state);
-
   return standings;
 }
 
