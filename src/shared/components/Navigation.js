@@ -7,15 +7,15 @@ const Navigation = (props) => {
   return (
     <div className="section--navigation">
       <Navbar color="faded" light>
-        <NavbarBrand href="/">Basketball Stats</NavbarBrand>
+        <NavbarBrand>
+          <Link to={`/`}>Basketball Stats</Link>
+        </NavbarBrand>
         <Nav className="float-xs-right" navbar>
           <NavItem>
-            <NavLink>
-              <Link to={`/standings`}>Standings</Link>
-            </NavLink>
+            <Link to={`/standings`}>Standings</Link>
           </NavItem>
           <NavItem>
-            <NavLink href="/stats">Stats</NavLink>
+            <Link to={`/stats`}>Standings</Link>
           </NavItem>
         </Nav>
       </Navbar>

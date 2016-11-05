@@ -9,8 +9,7 @@ const App = (props) => {
   return (
     <div className="section--app">
       <Navigation />
-      <Standings />
-      <h1>App</h1>
+      { props.children }
     </div>
   )
 }
