@@ -10,7 +10,7 @@ let Standings = (props) => {
   console.log(props);
   return (
     <div className="section--standings">
-      <h1>Standings</h1>
+      <h1>Standingssss</h1>
     </div>
   )
 }
