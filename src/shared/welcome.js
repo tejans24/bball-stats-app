@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Main from './Main/Main'
+import { renderRoutes } from './components/Routes'
 
-const mountnode = document.getElementById('react');
-ReactDOM.render(<Main />, mountnode);
+const mountnode = document.getElementById('react')
+ReactDOM.render(renderRoutes(), mountnode)
