@@ -6,13 +6,22 @@ import './standings.scss'
 
 import * as StandingsActions from '../../actions/standings.js'
 
-let Standings = (props) => {
-  console.log(props);
-  return (
-    <div className="section--standings">
-      <h1>Standingssss</h1>
-    </div>
-  )
+
+
+export class Standings extends React.Component {
+
+  componentDidMount() {
+    this.props.fetchStandings();
+  }
+  
+  render() {
+    console.log(this.props);
+    return (
+      <div className="section--standings">
+        <h1>Standingssss</h1>
+      </div>
+    )
+  }
 }
 
 const mapStateToProps = (state) => {
