@@ -4,29 +4,31 @@ import { connect } from 'react-redux'
 
 import './standings.scss'
 
+import Standing from '../../components/standing'
 import * as StandingsActions from '../../actions/standings.js'
-
-
 
 export class Standings extends React.Component {
 
   componentDidMount() {
-    this.props.fetchStandings();
+    this.props.fetchStandings()
+    this.props.fetchTeams()
   }
   
   render() {
-    console.log(this.props);
+    let { standings, teams } = this.props
+
     return (
       <div className="section--standings">
-        <h1>Standingssss</h1>
+        <h1>Standings</h1>
+        {standings.conference && <Standing standings={standings.conference.east}/> }
       </div>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  let { standings } = state;
-  return standings;
+  let { standings, teams } = state
+  return { standings, teams }
 }
 
 const mapDispatchToProps = (dispatch) => {
