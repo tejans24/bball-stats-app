@@ -19,15 +19,25 @@ export class Standings extends React.Component {
 
     return (
       <div className="section--standings">
-        <h1>Standings</h1>
-        {standings.conference && <Standing standings={standings.conference.east}/> }
+        {standings.conference && teams.league &&
+          <div>
+            <Standing
+              standings={standings.conference.east} confName={'East'}
+              teams={teams}
+            />
+            <Standing
+              standings={standings.conference.west} confName={'West'}
+              teams={teams}
+            />
+          </div>
+        }
       </div>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  let { standings, teams } = state
+  const { standings, teams } = state.standings
   return { standings, teams }
 }
 

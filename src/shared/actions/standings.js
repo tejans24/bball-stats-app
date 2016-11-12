@@ -81,7 +81,7 @@ export function fetchTeams() {
     dispatch(requestTeams())
 
     //current standings url
-    let url = CURRENT_STANDINGS_URL
+    let url = CURRENT_NBA_TEAMS_URL
 
     // Return a promise to wait for
     return fetch(url, {
